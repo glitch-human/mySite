@@ -27,6 +27,40 @@
             align-items: center;
             padding: 1.5rem;
             color: #c8d0e0;
+            /* ===== ОСНОВНОЙ КУРСОР (зелёный прицел) ===== */
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><circle cx="16" cy="16" r="10" stroke="%2300ffc8" stroke-width="2" fill="none"/><circle cx="16" cy="16" r="2" fill="%2300ffc8"/><line x1="16" y1="2" x2="16" y2="8" stroke="%2300ffc8" stroke-width="2"/><line x1="16" y1="24" x2="16" y2="30" stroke="%2300ffc8" stroke-width="2"/><line x1="2" y1="16" x2="8" y2="16" stroke="%2300ffc8" stroke-width="2"/><line x1="24" y1="16" x2="30" y2="16" stroke="%2300ffc8" stroke-width="2"/></svg>') 16 16, crosshair;
+        }
+
+        /* ===== КУРСОР ПРИ НАВЕДЕНИИ НА ИНТЕРАКТИВНЫЕ ЭЛЕМЕНТЫ ===== */
+        /* Карточки навыков */
+        .skill-card:hover {
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36"><circle cx="18" cy="18" r="12" stroke="%23ffffff" stroke-width="2.5" fill="none" opacity="0.9"/><circle cx="18" cy="18" r="3" fill="%23ffffff" opacity="0.9"/><line x1="18" y1="2" x2="18" y2="8" stroke="%23ffffff" stroke-width="2.5" opacity="0.9"/><line x1="18" y1="28" x2="18" y2="34" stroke="%23ffffff" stroke-width="2.5" opacity="0.9"/><line x1="2" y1="18" x2="8" y2="18" stroke="%23ffffff" stroke-width="2.5" opacity="0.9"/><line x1="28" y1="18" x2="34" y2="18" stroke="%23ffffff" stroke-width="2.5" opacity="0.9"/><line x1="6" y1="6" x2="10" y2="10" stroke="%23ffffff" stroke-width="2" opacity="0.5"/><line x1="30" y1="6" x2="26" y2="10" stroke="%23ffffff" stroke-width="2" opacity="0.5"/><line x1="6" y1="30" x2="10" y2="26" stroke="%23ffffff" stroke-width="2" opacity="0.5"/><line x1="30" y1="30" x2="26" y2="26" stroke="%23ffffff" stroke-width="2" opacity="0.5"/></svg>') 18 18, pointer !important;
+        }
+
+        /* Ссылки и кнопки */
+        .footer-links a:hover,
+        .link-terra:hover,
+        .link-tg:hover,
+        a:hover {
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36"><circle cx="18" cy="18" r="12" stroke="%23a855f7" stroke-width="2.5" fill="none"/><circle cx="18" cy="18" r="3" fill="%23a855f7"/><line x1="18" y1="2" x2="18" y2="8" stroke="%23a855f7" stroke-width="2.5"/><line x1="18" y1="28" x2="18" y2="34" stroke="%23a855f7" stroke-width="2.5"/><line x1="2" y1="18" x2="8" y2="18" stroke="%23a855f7" stroke-width="2.5"/><line x1="28" y1="18" x2="34" y2="18" stroke="%23a855f7" stroke-width="2.5"/><line x1="6" y1="6" x2="10" y2="10" stroke="%23a855f7" stroke-width="2" opacity="0.5"/><line x1="30" y1="6" x2="26" y2="10" stroke="%23a855f7" stroke-width="2" opacity="0.5"/><line x1="6" y1="30" x2="10" y2="26" stroke="%23a855f7" stroke-width="2" opacity="0.5"/><line x1="30" y1="30" x2="26" y2="26" stroke="%23a855f7" stroke-width="2" opacity="0.5"/></svg>') 18 18, pointer !important;
+        }
+
+        /* Теги (в описании) */
+        .tag:hover,
+        .tag-orange:hover,
+        .tag-blue:hover,
+        .tag-yellow:hover {
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34"><circle cx="17" cy="17" r="11" stroke="%2300ffc8" stroke-width="2.5" fill="none"/><circle cx="17" cy="17" r="3" fill="%2300ffc8"/><line x1="17" y1="2" x2="17" y2="8" stroke="%2300ffc8" stroke-width="2.5"/><line x1="17" y1="26" x2="17" y2="32" stroke="%2300ffc8" stroke-width="2.5"/><line x1="2" y1="17" x2="8" y2="17" stroke="%2300ffc8" stroke-width="2.5"/><line x1="26" y1="17" x2="32" y2="17" stroke="%2300ffc8" stroke-width="2.5"/></svg>') 17 17, pointer !important;
+        }
+
+        /* Аудиоплеер */
+        audio:hover {
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34"><circle cx="17" cy="17" r="11" stroke="%23ff8c00" stroke-width="2.5" fill="none"/><circle cx="17" cy="17" r="3" fill="%23ff8c00"/><line x1="17" y1="2" x2="17" y2="8" stroke="%23ff8c00" stroke-width="2.5"/><line x1="17" y1="26" x2="17" y2="32" stroke="%23ff8c00" stroke-width="2.5"/><line x1="2" y1="17" x2="8" y2="17" stroke="%23ff8c00" stroke-width="2.5"/><line x1="26" y1="17" x2="32" y2="17" stroke="%23ff8c00" stroke-width="2.5"/></svg>') 17 17, pointer !important;
+        }
+
+        /* Аватарка */
+        .avatar:hover {
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34"><circle cx="17" cy="17" r="11" stroke="%23a855f7" stroke-width="2.5" fill="none"/><circle cx="17" cy="17" r="3" fill="%23a855f7"/><line x1="17" y1="2" x2="17" y2="8" stroke="%23a855f7" stroke-width="2.5"/><line x1="17" y1="26" x2="17" y2="32" stroke="%23a855f7" stroke-width="2.5"/><line x1="2" y1="17" x2="8" y2="17" stroke="%23a855f7" stroke-width="2.5"/><line x1="26" y1="17" x2="32" y2="17" stroke="%23a855f7" stroke-width="2.5"/></svg>') 17 17, pointer !important;
         }
 
         .cyber-card {
@@ -84,6 +118,12 @@
             box-shadow: 0 0 30px rgba(0, 255, 200, 0.2), 0 0 60px rgba(0, 255, 200, 0.05);
             border: 1px solid rgba(0, 255, 200, 0.3);
             flex-shrink: 0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .avatar:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 40px rgba(0, 255, 200, 0.4), 0 0 80px rgba(0, 255, 200, 0.1);
         }
 
         .title-group h1 {
@@ -141,6 +181,12 @@
             letter-spacing: 0.5px;
             box-shadow: 0 0 20px rgba(0, 255, 200, 0.05);
             white-space: nowrap;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .nickname:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 30px rgba(0, 255, 200, 0.15);
         }
 
         .nickname i {
@@ -479,6 +525,13 @@
             color: #00ffc8;
             letter-spacing: 0.3px;
             margin: 2px 2px;
+            transition: all 0.3s ease;
+        }
+
+        .about-me .tag:hover {
+            background: rgba(0, 255, 200, 0.15);
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 255, 200, 0.1);
         }
 
         .about-me .tag-orange {
@@ -491,6 +544,13 @@
             color: #ff8c00;
             letter-spacing: 0.3px;
             margin: 2px 2px;
+            transition: all 0.3s ease;
+        }
+
+        .about-me .tag-orange:hover {
+            background: rgba(255, 140, 0, 0.2);
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(255, 140, 0, 0.15);
         }
 
         .about-me .tag-blue {
@@ -503,6 +563,13 @@
             color: #4da8da;
             letter-spacing: 0.3px;
             margin: 2px 2px;
+            transition: all 0.3s ease;
+        }
+
+        .about-me .tag-blue:hover {
+            background: rgba(77, 168, 218, 0.2);
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(77, 168, 218, 0.15);
         }
 
         .about-me .tag-yellow {
@@ -515,10 +582,91 @@
             color: #ffcc00;
             letter-spacing: 0.3px;
             margin: 2px 2px;
+            transition: all 0.3s ease;
+        }
+
+        .about-me .tag-yellow:hover {
+            background: rgba(255, 204, 0, 0.2);
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(255, 204, 0, 0.15);
         }
 
         .about-me .tag i {
             margin-right: 4px;
+        }
+
+        /* ===== АУДИОПЛЕЕР ===== */
+        .audio-player-wrapper {
+            width: 100%;
+            margin-top: 0.8rem;
+            padding: 0.8rem 1rem;
+            background: rgba(0, 255, 200, 0.03);
+            border: 1px solid rgba(0, 255, 200, 0.08);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+            transition: all 0.3s ease;
+        }
+
+        .audio-player-wrapper:hover {
+            border-color: rgba(0, 255, 200, 0.2);
+            background: rgba(0, 255, 200, 0.06);
+        }
+
+        .audio-player-wrapper .audio-icon {
+            color: #00ffc8;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .audio-player-wrapper:hover .audio-icon {
+            color: #ffffff;
+            text-shadow: 0 0 20px rgba(0, 255, 200, 0.3);
+        }
+
+        .audio-player-wrapper .audio-name {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.7rem;
+            color: #00ffc8;
+            letter-spacing: 0.3px;
+            margin-right: auto;
+            transition: all 0.3s ease;
+        }
+
+        .audio-player-wrapper:hover .audio-name {
+            color: #ffffff;
+            text-shadow: 0 0 20px rgba(0, 255, 200, 0.2);
+        }
+
+        .audio-player-wrapper audio {
+            width: 100%;
+            max-width: 280px;
+            height: 32px;
+            border-radius: 30px;
+            background: rgba(255, 255, 255, 0.03);
+            outline: none;
+        }
+
+        .audio-player-wrapper audio::-webkit-media-controls-panel {
+            background: rgba(10, 12, 25, 0.8);
+            border-radius: 30px;
+        }
+
+        .audio-player-wrapper audio::-webkit-media-controls-play-button {
+            background-color: #00ffc8;
+            border-radius: 50%;
+        }
+
+        .audio-player-wrapper audio::-webkit-media-controls-timeline {
+            background-color: rgba(0, 255, 200, 0.15);
+            border-radius: 10px;
+        }
+
+        .audio-player-wrapper audio::-webkit-media-controls-volume-slider {
+            background-color: rgba(0, 255, 200, 0.15);
+            border-radius: 10px;
         }
 
         .footer-info .age-badge {
@@ -584,6 +732,16 @@
                 font-size: 0.75rem;
                 padding: 1rem 1.2rem;
             }
+            .audio-player-wrapper {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .audio-player-wrapper .audio-name {
+                text-align: center;
+            }
+            .audio-player-wrapper audio {
+                max-width: 100%;
+            }
         }
 
         @media (max-width: 480px) {
@@ -647,7 +805,7 @@
                         <div class="desc">Боты, автоматизация, ML</div>
                     </div>
 
-                    <!-- Кибербез — ноутбук с матрицей -->
+                    <!-- Кибербез -->
                     <div class="skill-card">
                         <div class="icon" style="background: rgba(0, 255, 200, 0.05); border-color: rgba(0, 255, 200, 0.15);">
                             <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%230a0a1a' stroke='%2300ffc8' stroke-width='1.5'/%3E%3Crect x='22' y='26' width='56' height='36' rx='3' fill='%230a0a1a' stroke='%2300ffc8' stroke-width='2'/%3E%3Crect x='26' y='30' width='48' height='24' rx='1' fill='none' stroke='%2300ffc8' stroke-width='1' opacity='0.3'/%3E%3Ctext x='32' y='40' font-family='monospace' font-size='8' fill='%2300ffc8' opacity='0.8'%3E01001010%3C/text%3E%3Ctext x='32' y='50' font-family='monospace' font-size='8' fill='%2300ffc8' opacity='0.6'%3E11010001%3C/text%3E%3Ctext x='32' y='36' font-family='monospace' font-size='8' fill='%2300ffc8' opacity='0.4'%3E01101101%3C/text%3E%3Ctext x='32' y='46' font-family='monospace' font-size='8' fill='%2300ffc8' opacity='0.5'%3E10101010%3C/text%3E%3Ctext x='32' y='56' font-family='monospace' font-size='8' fill='%2300ffc8' opacity='0.7'%3E01011100%3C/text%3E%3Cpath d='M34 62 L50 68 L66 62' stroke='%2300ffc8' stroke-width='2' fill='none'/%3E%3Crect x='42' y='66' width='16' height='3' rx='1' fill='%2300ffc8' opacity='0.5'/%3E%3Ctext x='28' y='88' font-family='monospace' font-size='6' fill='%2300ffc8' opacity='0.4'%3Eroot@matrix~%23%3C/text%3E%3C/svg%3E"
@@ -677,7 +835,7 @@
                         <div class="desc">Пилотирование, симулятор</div>
                     </div>
 
-                    <!-- ВоенТех — радар (зелёный) -->
+                    <!-- ВоенТех -->
                     <div class="skill-card">
                         <div class="icon" style="background: rgba(0, 255, 200, 0.05); border-color: rgba(0, 255, 200, 0.12);">
                             <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%230a0a1a' stroke='%2300ffc8' stroke-width='1.5'/%3E%3Cpath d='M50 20 L50 34 M50 66 L50 80 M20 50 L34 50 M66 50 L80 50' stroke='%2300ffc8' stroke-width='1' opacity='0.2'/%3E%3Ccircle cx='50' cy='50' r='16' fill='none' stroke='%2300ffc8' stroke-width='1.8' opacity='0.35'/%3E%3Ccircle cx='50' cy='50' r='26' fill='none' stroke='%2300ffc8' stroke-width='1' opacity='0.15'/%3E%3Ccircle cx='50' cy='50' r='6' fill='%2300ffc8' opacity='0.12'/%3E%3Cpath d='M50 34 L50 66 M34 50 L66 50' stroke='%2300ffc8' stroke-width='0.8' opacity='0.25'/%3E%3Cpath d='M50 50 L64 36 M50 50 L36 36 M50 50 L64 64 M50 50 L36 64' stroke='%2300ffc8' stroke-width='1.2' opacity='0.2'/%3E%3Cpath d='M50 50 L57 43' stroke='%2300ffc8' stroke-width='2.5' stroke-linecap='round'/%3E%3Ccircle cx='57' cy='43' r='2' fill='%2300ffc8' opacity='0.7'/%3E%3Ccircle cx='50' cy='50' r='2' fill='%2300ffc8' opacity='0.5'/%3E%3Ctext x='38' y='88' font-family='monospace' font-size='8' fill='%2300ffc8' opacity='0.6'%3ERADAR%3C/text%3E%3C/svg%3E"
@@ -699,7 +857,7 @@
                         <div class="desc">3D-облака точек, сканы</div>
                     </div>
 
-                    <!-- Самолёты — маленький самолёт -->
+                    <!-- Самолёты -->
                     <div class="skill-card">
                         <div class="icon" style="background: rgba(255, 204, 0, 0.05); border-color: rgba(255, 204, 0, 0.12);">
                             <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%230a0a1a' stroke='%23ffcc00' stroke-width='1.5'/%3E%3Cpath d='M50 20 L50 30 M50 70 L50 80 M20 50 L30 50 M70 50 L80 50' stroke='%23ffcc00' stroke-width='1' opacity='0.2'/%3E%3Cpath d='M72 42 L64 39 L56 33 L50 28 L46 32 L54 40 L44 40 L38 35 L34 39 L42 45 L34 50 L42 55 L34 60 L38 64 L44 59 L54 59 L46 65 L50 69 L56 63 L64 57 L72 54' stroke='%23ffcc00' stroke-width='2.5' fill='none' stroke-linejoin='round'/%3E%3C/svg%3E"
@@ -782,6 +940,16 @@
                     <span class="tag-blue"><i class="fas fa-cubes"></i> #pointcloud</span>
                     <span class="tag-yellow"><i class="fas fa-plane"></i> #самолёты</span>
                 </span>
+
+                <!-- Аудиоплеер -->
+                <div class="audio-player-wrapper">
+                    <span class="audio-icon"><i class="fas fa-headphones"></i></span>
+                    <span class="audio-name">🎵 Зелёный шанс</span>
+                    <audio controls preload="none">
+                        <source src="Зелёный шанс.mp3" type="audio/mpeg">
+                        Ваш браузер не поддерживает аудиоплеер.
+                    </audio>
+                </div>
             </div>
         </div>
     </div>
