@@ -18,15 +18,15 @@
 
 | Навык | Уровень |
 |-------|---------|
-| ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) | ![75%](https://img.shields.io/badge/75%25-00ffc8?style=flat-square) |
-| ![Кибербезопасность](https://img.shields.io/badge/Кибербезопасность-00ffc8?style=for-the-badge&logo=security&logoColor=black) | ![50%](https://img.shields.io/badge/50%25-00ffc8?style=flat-square) |
-| ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white) | ![75%](https://img.shields.io/badge/75%25-00ffc8?style=flat-square) |
-| ![FPV Дроны](https://img.shields.io/badge/FPV_Дроны-ff8c00?style=for-the-badge&logo=drone&logoColor=white) | ![50%](https://img.shields.io/badge/50%25-ff8c00?style=flat-square) |
-| ![Военные Технологии](https://img.shields.io/badge/ВоенТех-00ffc8?style=for-the-badge&logo=radar&logoColor=black) | ![50%](https://img.shields.io/badge/50%25-00ffc8?style=flat-square) |
-| ![PointCloud](https://img.shields.io/badge/PointCloud-4da8da?style=for-the-badge&logo=3d&logoColor=white) | ![25%](https://img.shields.io/badge/25%25-4da8da?style=flat-square) |
-| ![Авиация](https://img.shields.io/badge/Самолёты-ffcc00?style=for-the-badge&logo=airbus&logoColor=black) | ![75%](https://img.shields.io/badge/75%25-ffcc00?style=flat-square) |
-| ![Базы данных](https://img.shields.io/badge/Базы_данных-4479A1?style=for-the-badge&logo=sqlite&logoColor=white) | ![50%](https://img.shields.io/badge/50%25-4479A1?style=flat-square) |
-| ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white) ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white) | ![25%](https://img.shields.io/badge/25%25-181717?style=flat-square) |
+| ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) | ![60%](https://img.shields.io/badge/60%25-00ffc8?style=flat-square) |
+| ![Кибербезопасность](https://img.shields.io/badge/Кибербезопасность-00ffc8?style=for-the-badge&logo=security&logoColor=black) | ![40%](https://img.shields.io/badge/40%25-00ffc8?style=flat-square) |
+| ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white) | ![60%](https://img.shields.io/badge/60%25-00ffc8?style=flat-square) |
+| ![FPV Дроны](https://img.shields.io/badge/FPV_Дроны-ff8c00?style=for-the-badge&logo=drone&logoColor=white) | ![40%](https://img.shields.io/badge/40%25-ff8c00?style=flat-square) |
+| ![Военные Технологии](https://img.shields.io/badge/ВоенТех-00ffc8?style=for-the-badge&logo=radar&logoColor=black) | ![40%](https://img.shields.io/badge/40%25-00ffc8?style=flat-square) |
+| ![PointCloud](https://img.shields.io/badge/PointCloud-4da8da?style=for-the-badge&logo=3d&logoColor=white) | ![20%](https://img.shields.io/badge/20%25-4da8da?style=flat-square) |
+| ![Авиация](https://img.shields.io/badge/Самолёты-ffcc00?style=for-the-badge&logo=airbus&logoColor=black) | ![60%](https://img.shields.io/badge/60%25-ffcc00?style=flat-square) |
+| ![Базы данных](https://img.shields.io/badge/Базы_данных-4479A1?style=for-the-badge&logo=sqlite&logoColor=white) | ![40%](https://img.shields.io/badge/40%25-4479A1?style=flat-square) |
+| ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white) ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white) | ![20%](https://img.shields.io/badge/20%25-181717?style=flat-square) |
 
 ---
 
@@ -72,5 +72,7 @@
 - 🌍 Люблю создавать полезные и креативные проекты
 
 ---
+
+![Visitor Badge](https://visitor-badge.laobi.icu/badge?page_id=glitch-human.glitch-human)
 
 ![Visitor Badge](https://visitor-badge.laobi.icu/badge?page_id=glitch-human.glitch-human)
