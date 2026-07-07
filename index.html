@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лео · Кибер-портфолио</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto Mono', monospace;
+            background: #0a0a0f;
+            background-image:
+                radial-gradient(ellipse at 10% 20%, rgba(0, 255, 200, 0.05) 0%, transparent 50%),
+                radial-gradient(ellipse at 90% 80%, rgba(150, 0, 255, 0.05) 0%, transparent 50%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1.5rem;
+            color: #c8d0e0;
+        }
+
+        .cyber-card {
+            max-width: 1100px;
+            width: 100%;
+            background: rgba(10, 12, 25, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-radius: 2.5rem;
+            padding: 2.5rem 2rem 2.8rem;
+            border: 1px solid rgba(0, 255, 200, 0.15);
+            box-shadow: 0 0 60px rgba(0, 255, 200, 0.05), inset 0 0 60px rgba(0, 255, 200, 0.02);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cyber-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #00ffc8, #a855f7, transparent);
+            animation: scanline 3s ease-in-out infinite;
+        }
+
+        @keyframes scanline {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .profile {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 1.2rem 2rem;
+            margin-bottom: 2.8rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .avatar {
+            background: linear-gradient(135deg, #00ffc8, #7c3aed);
+            width: 80px;
+            height: 80px;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Orbitron', monospace;
+            font-size: 2.6rem;
+            font-weight: 900;
+            color: #0a0a0f;
+            box-shadow: 0 0 30px rgba(0, 255, 200, 0.2), 0 0 60px rgba(0, 255, 200, 0.05);
+            border: 1px solid rgba(0, 255, 200, 0.3);
+            flex-shrink: 0;
+        }
+
+        .title-group h1 {
+            font-family: 'Orbitron', monospace;
+            font-size: 2.4rem;
+            font-weight: 900;
+            color: #e8f0ff;
+            letter-spacing: 0.02em;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.3rem 0.8rem;
+        }
+
+        .title-group h1 .badge {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.8rem;
+            font-weight: 600;
+            background: rgba(0, 255, 200, 0.12);
+            color: #00ffc8;
+            padding: 0.2rem 1rem;
+            border-radius: 30px;
+            border: 1px solid rgba(0, 255, 200, 0.2);
+            letter-spacing: 0.5px;
+        }
+
+        .title-group .sub {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.95rem;
+            font-weight: 400;
+            color: #8899bb;
+            background: rgba(255, 255, 255, 0.03);
+            display: inline-block;
+            padding: 0.2rem 1.2rem;
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            margin-top: 0.2rem;
+        }
+
+        .title-group .sub i {
+            margin-right: 8px;
+            color: #00ffc8;
+        }
+
+        .nickname {
+            margin-left: auto;
+            background: rgba(0, 255, 200, 0.06);
+            border: 1px solid rgba(0, 255, 200, 0.15);
+            color: #00ffc8;
+            padding: 0.4rem 1.4rem;
+            border-radius: 30px;
+            font-family: 'Orbitron', monospace;
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+            box-shadow: 0 0 20px rgba(0, 255, 200, 0.05);
+            white-space: nowrap;
+        }
+
+        .nickname i {
+            margin-right: 6px;
+            color: #a855f7;
+        }
+
+        .slider-section {
+            margin: 2.8rem 0 1.5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .slider-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+
+        .slider-header h2 {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #c8d8f0;
+            letter-spacing: 0.5px;
+        }
+
+        .slider-header h2 i {
+            color: #00ffc8;
+            margin-right: 12px;
+        }
+
+        .slider-header .hint {
+            font-size: 0.75rem;
+            color: #556688;
+            background: rgba(255, 255, 255, 0.03);
+            padding: 0.2rem 1rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.04);
+        }
+
+        .slider-container {
+            overflow-x: auto;
+            overflow-y: hidden;
+            padding: 0.5rem 0.2rem 1.5rem 0.2rem;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: thin;
+            scrollbar-color: #00ffc8 rgba(255, 255, 255, 0.03);
+            border-radius: 30px;
+        }
+
+        .slider-container::-webkit-scrollbar {
+            height: 6px;
+        }
+        .slider-container::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 10px;
+        }
+        .slider-container::-webkit-scrollbar-thumb {
+            background: linear-gradient(90deg, #00ffc8, #a855f7);
+            border-radius: 10px;
+        }
+
+        .slider-track {
+            display: flex;
+            gap: 1.5rem;
+            padding: 0.3rem 0.2rem;
+        }
+
+        .skill-card {
+            min-width: 200px;
+            max-width: 200px;
+            flex: 0 0 auto;
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            border-radius: 24px;
+            padding: 1.6rem 1rem 1.6rem 1.4rem;
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .skill-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(from 0deg, transparent, rgba(0, 255, 200, 0.03), transparent, rgba(168, 85, 247, 0.03), transparent);
+            animation: rotateGlow 6s linear infinite;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .skill-card:hover::before {
+            opacity: 1;
+        }
+
+        @keyframes rotateGlow {
+            100% { transform: rotate(360deg); }
+        }
+
+        .skill-card:hover {
+            border-color: rgba(0, 255, 200, 0.15);
+            background: rgba(255, 255, 255, 0.04);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0, 255, 200, 0.05);
+        }
+
+        .skill-card .icon {
+            font-size: 2.4rem;
+            color: #00ffc8;
+            margin-bottom: 0.8rem;
+            background: rgba(0, 255, 200, 0.05);
+            width: 54px;
+            height: 54px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 16px;
+            border: 1px solid rgba(0, 255, 200, 0.06);
+            position: relative;
+            z-index: 1;
+            padding: 4px;
+        }
+
+        .skill-card .icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+
+        .skill-card .icon i {
+            font-size: 2.2rem;
+        }
+
+        .skill-card h3 {
+            font-family: 'Orbitron', monospace;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #d0ddf0;
+            letter-spacing: 0.3px;
+            margin-bottom: 0.2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .skill-card .level {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin: 0.3rem 0 0.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .skill-card .level .stars {
+            color: #00ffc8;
+            letter-spacing: 2px;
+            font-size: 0.9rem;
+            text-shadow: 0 0 10px rgba(0, 255, 200, 0.2);
+        }
+
+        .skill-card .level .stars .empty {
+            color: #334455;
+            text-shadow: none;
+        }
+
+        .skill-card .desc {
+            font-size: 0.8rem;
+            color: #7788aa;
+            line-height: 1.3;
+            border-top: 1px solid rgba(255, 255, 255, 0.03);
+            padding-top: 0.6rem;
+            margin-top: 0.3rem;
+            position: relative;
+            z-index: 1;
+            font-family: 'Roboto Mono', monospace;
+        }
+
+        .footer-info {
+            margin-top: 2.8rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.03);
+            padding-top: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .footer-info .quote {
+            font-family: 'Orbitron', monospace;
+            font-weight: 400;
+            font-size: 0.85rem;
+            color: #556688;
+            background: rgba(255, 255, 255, 0.02);
+            padding: 0.3rem 1.4rem;
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+        }
+
+        .footer-info .quote i {
+            color: #00ffc8;
+            margin-right: 8px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-family: 'Orbitron', monospace;
+            font-weight: 700;
+            font-size: 0.7rem;
+            letter-spacing: 0.5px;
+            padding: 0.4rem 1.2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            text-transform: uppercase;
+        }
+
+        .footer-links .link-terra {
+            background: rgba(0, 255, 200, 0.06);
+            color: #00ffc8;
+            border-color: rgba(0, 255, 200, 0.12);
+        }
+
+        .footer-links .link-terra:hover {
+            background: rgba(0, 255, 200, 0.15);
+            box-shadow: 0 0 30px rgba(0, 255, 200, 0.1);
+            transform: translateY(-2px);
+            border-color: rgba(0, 255, 200, 0.3);
+        }
+
+        .footer-links .link-terra i {
+            color: #00ffc8;
+            font-size: 0.9rem;
+        }
+
+        .footer-links .link-tg {
+            background: rgba(0, 136, 204, 0.08);
+            color: #4da8da;
+            border-color: rgba(0, 136, 204, 0.12);
+        }
+
+        .footer-links .link-tg:hover {
+            background: rgba(0, 136, 204, 0.18);
+            box-shadow: 0 0 30px rgba(0, 136, 204, 0.1);
+            transform: translateY(-2px);
+            border-color: rgba(0, 136, 204, 0.3);
+        }
+
+        .footer-links .link-tg i {
+            color: #4da8da;
+            font-size: 0.9rem;
+        }
+
+        .about-me {
+            width: 100%;
+            margin-top: 1.2rem;
+            padding: 1.2rem 1.5rem;
+            background: rgba(0, 255, 200, 0.02);
+            border: 1px solid rgba(0, 255, 200, 0.06);
+            border-radius: 20px;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.85rem;
+            line-height: 1.7;
+            color: #99aac8;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .about-me:hover {
+            border-color: rgba(0, 255, 200, 0.12);
+            background: rgba(0, 255, 200, 0.03);
+        }
+
+        .about-me .highlight {
+            color: #00ffc8;
+            font-weight: 600;
+        }
+
+        .about-me .highlight-purple {
+            color: #a855f7;
+            font-weight: 600;
+        }
+
+        .about-me .glow-text {
+            color: #00ffc8;
+            text-shadow: 0 0 20px rgba(0, 255, 200, 0.1);
+        }
+
+        .about-me .orange-text {
+            color: #ff8c00;
+            font-weight: 600;
+        }
+
+        .about-me .blue-text {
+            color: #4da8da;
+            font-weight: 600;
+        }
+
+        .about-me i {
+            color: #00ffc8;
+            margin-right: 4px;
+        }
+
+        .about-me .tag {
+            display: inline-block;
+            background: rgba(0, 255, 200, 0.06);
+            border: 1px solid rgba(0, 255, 200, 0.08);
+            padding: 0.05rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            color: #00ffc8;
+            letter-spacing: 0.3px;
+            margin: 2px 2px;
+        }
+
+        .about-me .tag-orange {
+            display: inline-block;
+            background: rgba(255, 140, 0, 0.08);
+            border: 1px solid rgba(255, 140, 0, 0.12);
+            padding: 0.05rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            color: #ff8c00;
+            letter-spacing: 0.3px;
+            margin: 2px 2px;
+        }
+
+        .about-me .tag-blue {
+            display: inline-block;
+            background: rgba(77, 168, 218, 0.08);
+            border: 1px solid rgba(77, 168, 218, 0.12);
+            padding: 0.05rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            color: #4da8da;
+            letter-spacing: 0.3px;
+            margin: 2px 2px;
+        }
+
+        .about-me .tag-yellow {
+            display: inline-block;
+            background: rgba(255, 204, 0, 0.08);
+            border: 1px solid rgba(255, 204, 0, 0.12);
+            padding: 0.05rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            color: #ffcc00;
+            letter-spacing: 0.3px;
+            margin: 2px 2px;
+        }
+
+        .about-me .tag i {
+            margin-right: 4px;
+        }
+
+        .footer-info .age-badge {
+            background: rgba(0, 255, 200, 0.04);
+            border: 1px solid rgba(0, 255, 200, 0.08);
+            color: #00ffc8;
+            padding: 0.3rem 1.4rem;
+            border-radius: 30px;
+            font-family: 'Orbitron', monospace;
+            font-weight: 700;
+            font-size: 0.75rem;
+            letter-spacing: 0.5px;
+        }
+
+        .footer-info .age-badge i {
+            margin-right: 6px;
+            color: #a855f7;
+        }
+
+        @media (max-width: 700px) {
+            .cyber-card {
+                padding: 1.8rem 1rem 2rem;
+                border-radius: 2rem;
+            }
+            .profile {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .nickname {
+                margin-left: 0;
+                align-self: flex-start;
+            }
+            .title-group h1 {
+                font-size: 1.8rem;
+            }
+            .slider-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .slider-header .hint {
+                align-self: flex-end;
+            }
+            .skill-card {
+                min-width: 170px;
+                max-width: 170px;
+                padding: 1.2rem 0.8rem 1.2rem 1rem;
+            }
+            .footer-info {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0.8rem;
+            }
+            .footer-links {
+                justify-content: center;
+            }
+            .footer-info .quote {
+                text-align: center;
+            }
+            .footer-info .age-badge {
+                text-align: center;
+            }
+            .about-me {
+                font-size: 0.75rem;
+                padding: 1rem 1.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .skill-card {
+                min-width: 150px;
+                max-width: 150px;
+            }
+            .avatar {
+                width: 64px;
+                height: 64px;
+                font-size: 2rem;
+            }
+            .title-group h1 {
+                font-size: 1.5rem;
+            }
+            .footer-links a {
+                font-size: 0.6rem;
+                padding: 0.3rem 1rem;
+            }
+            .about-me {
+                font-size: 0.7rem;
+                padding: 0.8rem 1rem;
+                line-height: 1.6;
+            }
+            .skill-card .icon {
+                width: 44px;
+                height: 44px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cyber-card">
+        <!-- Профиль -->
+        <div class="profile">
+            <div class="avatar">Л</div>
+            <div class="title-group">
+                <h1>
+                    Лео
+                    <span class="badge"><i class="fas fa-terminal"></i> dev</span>
+                </h1>
+                <div class="sub"><i class="fas fa-shield-halved"></i> юный программист · 14 лет</div>
+            </div>
+            <div class="nickname"><i class="fas fa-skull"></i> Давинчи</div>
+        </div>
+
+        <!-- Слайдер -->
+        <div class="slider-section">
+            <div class="slider-header">
+                <h2><i class="fas fa-microchip"></i> Навыки</h2>
+                <span class="hint"><i class="fas fa-arrows-left-right"></i> листай →</span>
+            </div>
+
+            <div class="slider-container">
+                <div class="slider-track">
+                    <!-- Python -->
+                    <div class="skill-card">
+                        <div class="icon"><i class="fab fa-python"></i></div>
+                        <h3>Python</h3>
+                        <div class="level"><span class="stars">★★★<span class="empty">☆☆</span></span></div>
+                        <div class="desc">Боты, автоматизация, ML</div>
+                    </div>
+
+                    <!-- Кибербез — ноутбук с матрицей -->
+                    <div class="skill-card">
+                        <div class="icon" style="background: rgba(0, 255, 200, 0.05); border-color: rgba(0, 255, 200, 0.15);">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%230a0a1a' stroke='%2300ffc8' stroke-width='1.5'/%3E%3Crect x='22' y='26' width='56' height='36' rx='3' fill='%230a0a1a' stroke='%2300ffc8' stroke-width='2'/%3E%3Crect x='26' y='30' width='48' height='24' rx='1' fill='none' stroke='%2300ffc8' stroke-width='1' opacity='0.3'/%3E%3Ctext x='32' y='40' font-family='monospace' font-size='8' fill='%2300ffc8' opacity='0.8'%3E01001010%3C/text%3E%3Ctext x='32' y='50' font-family='monospace' font-size='8' fill='%2300ffc8' opacity='0.6'%3E11010001%3C/text%3E%3Ctext x='32' y='36' font-family='monospace' font-size='8' fill='%2300ffc8' opacity='0.4'%3E01101101%3C/text%3E%3Ctext x='32' y='46' font-family='monospace' font-size='8' fill='%2300ffc8' opacity='0.5'%3E10101010%3C/text%3E%3Ctext x='32' y='56' font-family='monospace' font-size='8' fill='%2300ffc8' opacity='0.7'%3E01011100%3C/text%3E%3Cpath d='M34 62 L50 68 L66 62' stroke='%2300ffc8' stroke-width='2' fill='none'/%3E%3Crect x='42' y='66' width='16' height='3' rx='1' fill='%2300ffc8' opacity='0.5'/%3E%3Ctext x='28' y='88' font-family='monospace' font-size='6' fill='%2300ffc8' opacity='0.4'%3Eroot@matrix~%23%3C/text%3E%3C/svg%3E"
+                                 alt="Ноутбук с матрицей — кибербезопасность">
+                        </div>
+                        <h3>Кибербез</h3>
+                        <div class="level"><span class="stars">★★<span class="empty">☆☆☆</span></span></div>
+                        <div class="desc">Безопасность, шифрование</div>
+                    </div>
+
+                    <!-- HTML & CSS -->
+                    <div class="skill-card">
+                        <div class="icon"><i class="fab fa-html5"></i></div>
+                        <h3>HTML & CSS</h3>
+                        <div class="level"><span class="stars">★★★<span class="empty">☆☆</span></span></div>
+                        <div class="desc">Вёрстка, адаптив, анимации</div>
+                    </div>
+
+                    <!-- FPV Дроны -->
+                    <div class="skill-card">
+                        <div class="icon" style="background: rgba(255, 140, 0, 0.05); border-color: rgba(255, 140, 0, 0.12);">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%230a0a1a' stroke='%23ff8c00' stroke-width='1.5'/%3E%3Cpath d='M50 15 L50 28 M50 72 L50 85 M15 50 L28 50 M72 50 L85 50' stroke='%23ff8c00' stroke-width='1' opacity='0.2'/%3E%3Crect x='38' y='32' width='24' height='16' rx='3' fill='none' stroke='%23ff8c00' stroke-width='1.8'/%3E%3Crect x='42' y='36' width='16' height='8' rx='1.5' fill='none' stroke='%23ff8c00' stroke-width='1.2' opacity='0.5'/%3E%3Ccircle cx='28' cy='50' r='10' fill='none' stroke='%23ff8c00' stroke-width='1.5' opacity='0.4'/%3E%3Ccircle cx='72' cy='50' r='10' fill='none' stroke='%23ff8c00' stroke-width='1.5' opacity='0.4'/%3E%3Ccircle cx='28' cy='50' r='4' fill='%23ff8c00' opacity='0.3'/%3E%3Ccircle cx='72' cy='50' r='4' fill='%23ff8c00' opacity='0.3'/%3E%3Cpath d='M38 48 L28 45 M38 52 L28 55 M62 48 L72 45 M62 52 L72 55' stroke='%23ff8c00' stroke-width='1' opacity='0.4'/%3E%3Ctext x='44' y='66' font-family='monospace' font-size='8' fill='%23ff8c00' opacity='0.5'%3E7%22%3C/text%3E%3C/svg%3E"
+                                 alt="7-дюймовый FPV дрон">
+                        </div>
+                        <h3>FPV Дроны</h3>
+                        <div class="level"><span class="stars">★★<span class="empty">☆☆☆</span></span></div>
+                        <div class="desc">Пилотирование, симулятор</div>
+                    </div>
+
+                    <!-- ВоенТех — радар (зелёный) -->
+                    <div class="skill-card">
+                        <div class="icon" style="background: rgba(0, 255, 200, 0.05); border-color: rgba(0, 255, 200, 0.12);">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%230a0a1a' stroke='%2300ffc8' stroke-width='1.5'/%3E%3Cpath d='M50 20 L50 34 M50 66 L50 80 M20 50 L34 50 M66 50 L80 50' stroke='%2300ffc8' stroke-width='1' opacity='0.2'/%3E%3Ccircle cx='50' cy='50' r='16' fill='none' stroke='%2300ffc8' stroke-width='1.8' opacity='0.35'/%3E%3Ccircle cx='50' cy='50' r='26' fill='none' stroke='%2300ffc8' stroke-width='1' opacity='0.15'/%3E%3Ccircle cx='50' cy='50' r='6' fill='%2300ffc8' opacity='0.12'/%3E%3Cpath d='M50 34 L50 66 M34 50 L66 50' stroke='%2300ffc8' stroke-width='0.8' opacity='0.25'/%3E%3Cpath d='M50 50 L64 36 M50 50 L36 36 M50 50 L64 64 M50 50 L36 64' stroke='%2300ffc8' stroke-width='1.2' opacity='0.2'/%3E%3Cpath d='M50 50 L57 43' stroke='%2300ffc8' stroke-width='2.5' stroke-linecap='round'/%3E%3Ccircle cx='57' cy='43' r='2' fill='%2300ffc8' opacity='0.7'/%3E%3Ccircle cx='50' cy='50' r='2' fill='%2300ffc8' opacity='0.5'/%3E%3Ctext x='38' y='88' font-family='monospace' font-size='8' fill='%2300ffc8' opacity='0.6'%3ERADAR%3C/text%3E%3C/svg%3E"
+                                 alt="Радар">
+                        </div>
+                        <h3>ВоенТех</h3>
+                        <div class="level"><span class="stars">★★<span class="empty">☆☆☆</span></span></div>
+                        <div class="desc">Радары, системы наведения</div>
+                    </div>
+
+                    <!-- PointCloud -->
+                    <div class="skill-card">
+                        <div class="icon" style="background: rgba(77, 168, 218, 0.05); border-color: rgba(77, 168, 218, 0.12);">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%230a0a1a' stroke='%234da8da' stroke-width='1.5'/%3E%3Ccircle cx='35' cy='35' r='3' fill='%234da8da' opacity='0.6'/%3E%3Ccircle cx='50' cy='28' r='2.5' fill='%234da8da' opacity='0.6'/%3E%3Ccircle cx='65' cy='35' r='3' fill='%234da8da' opacity='0.6'/%3E%3Ccircle cx='70' cy='50' r='2.5' fill='%234da8da' opacity='0.6'/%3E%3Ccircle cx='65' cy='65' r='3' fill='%234da8da' opacity='0.6'/%3E%3Ccircle cx='50' cy='72' r='2.5' fill='%234da8da' opacity='0.6'/%3E%3Ccircle cx='35' cy='65' r='3' fill='%234da8da' opacity='0.6'/%3E%3Ccircle cx='30' cy='50' r='2.5' fill='%234da8da' opacity='0.6'/%3E%3Ccircle cx='50' cy='50' r='4' fill='%234da8da' opacity='0.3'/%3E%3Cpath d='M50 50 L55 45 M50 50 L45 55 M50 50 L55 55 M50 50 L45 45' stroke='%234da8da' stroke-width='1.2' opacity='0.4'/%3E%3Ctext x='40' y='90' font-family='monospace' font-size='7' fill='%234da8da' opacity='0.5'%3E3D%3C/text%3E%3C/svg%3E"
+                                 alt="PointCloud 3D">
+                        </div>
+                        <h3>PointCloud</h3>
+                        <div class="level"><span class="stars">★<span class="empty">☆☆☆☆</span></span></div>
+                        <div class="desc">3D-облака точек, сканы</div>
+                    </div>
+
+                    <!-- Самолёты — маленький самолёт -->
+                    <div class="skill-card">
+                        <div class="icon" style="background: rgba(255, 204, 0, 0.05); border-color: rgba(255, 204, 0, 0.12);">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%230a0a1a' stroke='%23ffcc00' stroke-width='1.5'/%3E%3Cpath d='M50 20 L50 30 M50 70 L50 80 M20 50 L30 50 M70 50 L80 50' stroke='%23ffcc00' stroke-width='1' opacity='0.2'/%3E%3Cpath d='M72 42 L64 39 L56 33 L50 28 L46 32 L54 40 L44 40 L38 35 L34 39 L42 45 L34 50 L42 55 L34 60 L38 64 L44 59 L54 59 L46 65 L50 69 L56 63 L64 57 L72 54' stroke='%23ffcc00' stroke-width='2.5' fill='none' stroke-linejoin='round'/%3E%3C/svg%3E"
+                                 alt="Маленький самолёт">
+                        </div>
+                        <h3>Самолёты</h3>
+                        <div class="level"><span class="stars">★★★<span class="empty">☆☆</span></span></div>
+                        <div class="desc">Авиация, системы</div>
+                    </div>
+
+                    <!-- Базы данных -->
+                    <div class="skill-card">
+                        <div class="icon"><i class="fas fa-database"></i></div>
+                        <h3>Базы данных</h3>
+                        <div class="level"><span class="stars">★★<span class="empty">☆☆☆</span></span></div>
+                        <div class="desc">SQLite, JSON, API</div>
+                    </div>
+
+                    <!-- Git -->
+                    <div class="skill-card">
+                        <div class="icon"><i class="fab fa-git-alt"></i></div>
+                        <h3>Git & GitHub</h3>
+                        <div class="level"><span class="stars">★<span class="empty">☆☆☆</span></span></div>
+                        <div class="desc">Коммиты, ветки, PR</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Футер -->
+        <div class="footer-info">
+            <span class="quote"><i class="fas fa-quote-left"></i> Код — это сила</span>
+
+            <div class="footer-links">
+                <a href="https://terrasolid.com" target="_blank" class="link-terra">
+                    <i class="fas fa-globe"></i> TerraSolid
+                </a>
+                <a href="https://t.me/ldav1nc1" target="_blank" class="link-tg">
+                    <i class="fab fa-telegram-plane"></i> @ldav1nc1
+                </a>
+            </div>
+
+            <span class="age-badge"><i class="fas fa-bolt"></i> 14 лет · Давинчи</span>
+
+            <!-- Описание -->
+            <div class="about-me">
+                <i class="fas fa-quote-left" style="opacity:0.3; font-size:1.2rem; margin-right:6px;"></i>
+                Меня зовут <span class="highlight">Лео</span>, мне <span class="highlight">14 лет</span>,
+                и я — <span class="highlight-purple">юный программист и кибербез спец</span>. Меня часто называют
+                <span class="glow-text">«Давинчи»</span>.
+                <br><br>
+                Я увлекаюсь <span class="highlight">Python</span> — изучаю машинное обучение и создаю
+                телеграм-ботов. Мне интересна <span class="highlight-purple">кибербезопасность</span>:
+                шифрование, сетевые протоколы и защита информации. Также я активно осваиваю
+                <span class="highlight">веб-разработку</span> (HTML, CSS).
+                <br><br>
+                <i class="fas fa-drone" style="color:#ff8c00;"></i>
+                <span class="orange-text">FPV-дроны</span> — моя новая страсть! Я учусь управлять ими
+                в <span class="orange-text">симуляторах</span>, отрабатываю полёты и нанесение ударов
+                по объектам. Меня очень интересуют <span class="highlight-purple">военные технологии</span>:
+                <span class="orange-text">радары</span>, системы наведения, защищённые каналы передачи данных,
+                а также различные датчики и сенсоры.
+                <br><br>
+                <i class="fas fa-cubes" style="color:#4da8da;"></i>
+                Мне также интересен <span class="blue-text">PointCloud</span> — облака точек и 3D-сканирование
+                для создания цифровых моделей местности и объектов. И конечно же,
+                <span style="color:#ffcc00; font-weight:600;">самолёты</span> ✈ — авиационные системы,
+                навигация и всё, что связано с небом.
+                <br><br>
+                <i class="fas fa-rocket" style="color:#a855f7;"></i>
+                Моя цель — стать <span class="highlight-purple">специалистом по кибербезопасности</span>
+                и защищать системы от атак, а также разбираться в <span class="orange-text">военных технологиях</span>
+                и применять их для защиты.
+                <span style="display:inline-block; margin-top:0.5rem;">
+                    <span class="tag"><i class="fas fa-code"></i> #программист</span>
+                    <span class="tag"><i class="fas fa-shield-halved"></i> #кибербез</span>
+                    <span class="tag-orange"><i class="fas fa-drone"></i> #FPV</span>
+                    <span class="tag-orange"><i class="fas fa-microchip"></i> #воентех</span>
+                    <span class="tag-orange"><i class="fas fa-radar"></i> #радары</span>
+                    <span class="tag-blue"><i class="fas fa-cubes"></i> #pointcloud</span>
+                    <span class="tag-yellow"><i class="fas fa-plane"></i> #самолёты</span>
+                </span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
